@@ -20,5 +20,6 @@ Route::prefix('stats')->group(function (): void {
 });
 
 Route::prefix('players')->group(function (): void {
+    Route::get('/lookup', [StatsController::class, 'lookup']);
     Route::get('/{player}/history', [StatsController::class, 'history']);
 });

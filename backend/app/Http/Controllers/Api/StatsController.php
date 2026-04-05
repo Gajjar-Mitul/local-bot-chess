@@ -49,6 +49,18 @@ class StatsController extends Controller
         ]);
     }
 
+    public function lookup(): JsonResponse
+    {
+        $name = request()->query('name', '');
+        $player = Player::where('name', $name)->first();
+
+        if (! $player) {
+            return response()->json(['player' => null, 'summary' => null, 'games' => []]);
+        }
+
+        return $this->history($player);
+    }
+
     public function history(Player $player): JsonResponse
     {
         $games = $player->games()

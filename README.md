@@ -72,4 +72,20 @@ Frontend URL: `http://localhost:5173`
 ## Current environment note
 
 On this machine, `pdo_sqlite` is not enabled, so Laravel's default SQLite setup fails migrations. Use MySQL credentials in `.env` and then run `php artisan migrate`.
+
+## Phase 2 Highlights (In Progress)
+
+Current Phase 2 includes:
+- Captured pieces display around the board
+- Material evaluation bar (clamped score from -10 to +10)
+
+Phase 2 high-priority TODO:
+- Strategy-aware evaluation bar (not only material points)
+- Add positional scoring factors:
+	- center control
+	- mobility
+	- king safety
+	- pawn structure
+- Upgrade bot move selection so it responds with the best possible move for the current position (multi-factor evaluation and deeper lookahead)
+
 # local-bot-chess
