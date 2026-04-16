@@ -1,13 +1,61 @@
-# Chess (Human vs Bot)
+# Chess Engine (Human vs Bot)
 
+A rule-based chess engine built to model complex logic and decision-making without relying on AI.
+
+---
+
+## 🧠 Why This Exists
+
+After relying heavily on AI tools, I wanted to validate my ability to:
+
+- think through complex problems independently  
+- translate real-world rules into code  
+- build logic-driven systems without external assistance  
+
+---
+
+## 🚧 The Challenge
+
+Chess looks simple to humans, but encoding it requires defining:
+
+- what constitutes a legal move  
+- piece-specific movement rules (pawn, bishop, rook, etc.)  
+- constraints (cannot capture own piece)  
+- board state validation  
+- rule enforcement (check, checkmate, castling, en passant, promotion)  
+
+Each move requires multiple layers of validation and edge-case handling.
+
+---
+
+## ⚙️ What This System Does
+
+- Validates all legal moves for each piece  
+- Enforces game rules and constraints  
+- Maintains board state  
+- Processes player moves through backend logic  
+- Generates bot moves (basic strategy implemented)  
+
+---
+
+## 🎯 Why This Matters
+
+- Strengthened problem-solving without AI assistance  
+- Improved ability to model real-world logic into code  
+- Reinforced understanding of constraint-driven systems  
+
+> Built as a personal challenge to sharpen core engineering skills.
+## 🖥️ Preview
+
+![Chess Preview](./screenshot.png)
 This repo contains:
 - `backend` Laravel 13 API (chess rules + bot move generation)
 - `frontend` Vue 3 + Vite app (board UI)
 
 ## What is implemented
 
-- New game creation with selectable human color
-- Move submission and legal move validation on backend
+- New game creation with selectable human colour
+- Move submission and legal move validation to the backend
 - Core rules: check, checkmate, stalemate, castling, en passant, promotion
 - Simple bot move strategy (material-aware one-ply search)
 - Move history and game reset endpoints
@@ -82,7 +130,7 @@ Current Phase 2 includes:
 Phase 2 high-priority TODO:
 - Strategy-aware evaluation bar (not only material points)
 - Add positional scoring factors:
-	- center control
+	- centre control
 	- mobility
 	- king safety
 	- pawn structure
